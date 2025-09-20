@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos en forma de corazón</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd6e0 0%, #fff066 100%);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      color: #e63946;
+    }
+    .corazon-fotos {
+      display: grid;
+      grid-template-columns: repeat(7, 55px); /* 7 columnas */
+      grid-auto-rows: 55px;
+      gap: 15px;
+      justify-content: center;
+    }
+    .foto-cuadro {
+      width: 65px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #fffbe6;
+      border: 2px solid #fffbe6;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+    }
+    .vacio {
+      visibility: hidden; /* espacios vacíos en el corazón */
+    }
+    audio {
+      width: 250px;
+      height: 28px;
+      border-radius: 1px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    }
+    @media (max-width: 600px) {
+      .corazon-fotos {
+        grid-template-columns: repeat(7, 35px);
+        grid-auto-rows: 35px;
+        gap: 3px;
+      }
+      .foto-cuadro {
+        width: 35px;
+        height: 35px;
+        border-radius: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>🤍Recuerdos de nuestro momentos🤍</h2>
+    
+  <div class="corazon-fotos">
+    <!-- Fila 1 -->
+    <div class="vacio"></div>
+    <img src="/fotos/Captura de pantalla 2025-08-23 001752.png" class="foto-cuadro">
+    <div class="vacio"></div>
+    <img src="/fotos/Captura de pantalla 2025-08-24 025506.png" class="foto-cuadro">
+    <div class="vacio"></div>
+    <img src="/fotos/Captura de pantalla 2025-08-25 225852.png" class="foto-cuadro">
+    <div class="vacio"></div>
+
+    <!-- Fila 2 -->
+    <img src="/fotos/Captura de pantalla 2025-08-28 210100.png" class="foto-cuadro" alt="A young woman smiling gently while seated in a softly lit room. She appears relaxed and content, with a warm and friendly expression. The background features a cozy indoor setting with muted colors, creating a calm and inviting atmosphere.">
+    <img src="/fotos/Captura de pantalla 2025-08-28 214552.png" class="foto-cuadro">
+    <img src="/fotos/Captura de pantalla 2025-09-05 231539.png" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-51-28.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-51-33.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-51-39.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-51-42.jpg" class="foto-cuadro">
+
+    <!-- Fila 3 -->
+    <img src="/fotos/photo_2025-09-20_11-51-46.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-51-50.jpg" class="foto-cuadro" alt="Two smiling friends posing closely together, both looking happy and relaxed. The background shows a cozy indoor setting with warm lighting. The overall mood is cheerful and affectionate.">
+    <img src="/fotos/photo_2025-09-20_11-51-52.jpg" class="foto-cuadro" alt="A young woman smiling warmly while sitting at a table with a cup of coffee. She appears relaxed and content. The background features a softly lit café with other patrons and cozy decor. The overall atmosphere is friendly and inviting.">
+    <img src="/fotos/photo_2025-09-20_11-52-06.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-10.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-19.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-22.jpg" class="foto-cuadro">
+
+    <!-- Fila 4 -->
+    <div class="vacio"></div>
+    <img src="/fotos/photo_2025-09-20_11-52-25.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-29.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-32.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-39.jpg" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-52-41.jpg" class="foto-cuadro">
+    <div class="vacio"></div>
+
+    <!-- Fila 5 -->
+    <div class="vacio"></div>
+    <div class="vacio"></div>
+    <img src="/img/Captura de pantalla 2025-08-25 225852.png" class="foto-cuadro">
+    <img src="/img/foto2.png" class="foto-cuadro">
+    <img src="/fotos/photo_2025-09-20_11-51-33.jpg" class="foto-cuadro">
+    <div class="vacio"></div>
+    <div class="vacio"></div>
+
+    <!-- Fila 6 -->
+    <div class="vacio"></div>
+    <div class="vacio"></div>
+    <div class="vacio"></div>
+    <img src="/fotos/photo_2025-09-20_11-52-25.jpg" class="foto-cuadro">
+    <div class="vacio"></div>
+    <div class="vacio"></div>
+    <div class="vacio"></div>
+  </div>
+
+  <p style="text-align:center;color:#b38f00;">❤️</p>
+  <audio controls style="display:block;margin:1rem auto;">
+        <source src="/music/Audio de WhatsApp 2025-09-20 a las 16.05.29_400a98ac.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+  </audio>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var audio = document.querySelector('audio');
+        if (audio) {
+          audio.autoplay = true;
+          audio.load();
+          audio.play().catch(()=>{});
+        }
+      });
+    </script>
+</body>
+</html>

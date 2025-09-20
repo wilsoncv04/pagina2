@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Para mi novia</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		body {
+			background: linear-gradient(135deg, #ffd6e0 0%, #fff066 100%);
+			min-height: 100vh;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+		.dedicatoria {
+			background: rgba(255,255,255,0.85);
+			border-radius: 16px;
+			box-shadow: 0 2px 16px rgba(109, 106, 96, 0.15);
+			padding: 2.5rem 2rem;
+			text-align: center;
+			max-width: 500px;
+			position: relative;
+			z-index: 2;
+		}
+		.dedicatoria h1 {
+			color: #94464c;
+			margin-bottom: 1rem;
+		}
+		.dedicatoria p {
+			color: #b38f00;
+			font-size: 1.2rem;
+		}
+		.corazon-flotante {
+			position: fixed;
+			bottom: -40px;
+			font-size: 2.5rem;
+			animation: corazonUp 6s linear forwards;
+			pointer-events: none;
+			z-index: 1;
+		}
+		@keyframes corazonUp {
+			0% { bottom: -40px; opacity: 0.7; }
+			80% { opacity: 1; }
+			100% { bottom: 100vh; opacity: 0.1; }
+		}
+
+        .galeria-fotos {
+			display: flex;
+			justify-content: center;
+			gap: 40rem;
+			margin: 1rem 0;
+		}
+		.foto-lateral {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 15px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+			background: #fffbe6;
+		}
+		@media (max-width: 600px) {
+			.galeria-fotos {
+				gap: 0.5rem;
+			}
+			.foto-lateral {
+				width: 55px;
+				height: 55px;
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="dedicatoria">
+		<h1>Para mi Roselyn🤍</h1>
+		<p>Sé que la distancia lo hace todo un poco complicado, pero quiero enseñarte el amor que tengo para darte. <br>
+			Tú me gustas, siempre te lo he dicho, y mis sentimientos por ti son reales. Poco a poco quiero ganarme tu <br>
+			confianza, demostrarte que lo que siento no es pasajero, sino verdadero.<br>
+
+            Este 21 de septiembre, quiero que estés conmigo, que no seas solo espectadora… <br>
+			quiero que seas parte de todo lo que siento y de lo que quiero construir contigo. 💖<br></p>
+		<button id="irFotos" class="boton-ir">Ver corazón de fotos</button>
+	</div>
+
+	<script>
+	// Botón para ir a la página de fotos
+	document.addEventListener('DOMContentLoaded', function() {
+		const btnFotos = document.getElementById('irFotos');
+		if (btnFotos) {
+			btnFotos.addEventListener('click', function() {
+				window.location.href = 'fotos.html';
+			});
+		}
+	});
+	// Animación de girasoles y mariposas flotando
+	const emojis = ['🌻', '🌼', '🦋'];
+	function crearElementoFlotante() {
+		const elem = document.createElement('span');
+		elem.className = 'corazon-flotante';
+		elem.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+		elem.style.left = Math.random() * 95 + 'vw';
+		elem.style.fontSize = (2 + Math.random() * 2) + 'rem';
+		document.body.appendChild(elem);
+		elem.addEventListener('animationend', () => elem.remove());
+	}
+	setInterval(crearElementoFlotante, 700);
+	</script>
+</body>
+</html>

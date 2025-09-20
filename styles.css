@@ -1,0 +1,242 @@
+.boton-ir {
+    margin-top: 2rem;
+    background: #ffe066;
+    color: #222;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 224, 102, 0.15);
+    transition: background 0.2s, color 0.2s;
+}
+.boton-ir:hover {
+    background: #ffd600;
+    color: #b38f00;
+}
+/* Animación de mariposas volando */
+.mariposa-volando {
+    position: fixed;
+    top: -60px;
+    left: 0;
+    font-size: 2.5rem;
+    pointer-events: none;
+    z-index: 1;
+    animation: mariposaFly 6s cubic-bezier(0.4,0.2,0.2,1) forwards;
+}
+
+@keyframes mariposaFly {
+    0% {
+        top: -60px;
+        opacity: 1;
+        transform: translateX(0) rotate(-10deg) scale(1);
+    }
+    30% {
+        transform: translateX(40px) rotate(10deg) scale(1.1);
+    }
+    60% {
+        transform: translateX(-30px) rotate(-15deg) scale(1.05);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0.2;
+        transform: translateX(60px) rotate(25deg) scale(0.9);
+    }
+}
+/* Animación de girasoles cayendo */
+.girasol-cayendo {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    font-size: 2.5rem;
+    pointer-events: none;
+    z-index: 1;
+    animation: girasolDrop 5s cubic-bezier(0.4,0.2,0.2,1) forwards;
+    transform: rotate(-10deg);
+}
+
+@keyframes girasolDrop {
+    0% {
+        top: -50px;
+        opacity: 1;
+        transform: rotate(-10deg) translateX(0);
+    }
+    50% {
+        transform: rotate(10deg) translateX(30px);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0.2;
+        transform: rotate(25deg) translateX(60px);
+    }
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e0 0%, #fff066 100%);
+    /* Rosa claro (#ffd6e0) y amarillo claro (#fff066) */
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.flores-amarillas {
+    background: linear-gradient(90deg, #fffbe6 0%, #fffde4 100%);
+    border: 2px solid #ffe066;
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 224, 102, 0.15);
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.flores-amarillas h2 {
+    color: #e6b800;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+.flores-amarillas p {
+    color: #b38f00;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.flores-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+}
+.flor {
+    filter: drop-shadow(0 2px 4px #ffe066);
+}
+header {
+    background: #0078d7;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+section {
+    margin-top: 2rem;
+    background: #ffe066;
+    color: #222;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 224, 102, 0.15);
+    transition: background 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+button:hover {
+    background: #005fa3;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+input, textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+    border-radius: 0 0 8px 8px;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .flores-amarillas, .dedicatoria {
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .flores-amarillas, .dedicatoria {
+        max-width: 100vw;
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        box-sizing: border-box;
+        margin: 0.5rem auto;
+    }
+    .flores-container {
+        font-size: 1.3rem;
+        gap: 0.3rem;
+        flex-wrap: wrap;
+    }
+    .boton-ir {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    h1, h2 {
+        font-size: 1.1rem;
+    }
+    p, .texto-girasol {
+        font-size: 0.95rem;
+    }
+}
+
